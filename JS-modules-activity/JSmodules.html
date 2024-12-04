@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .glass-container {
+            background: rgba(94, 80, 63, 0.29);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(9.4px);
+            -webkit-backdrop-filter: blur(9.4px);
+            border: 1px solid rgba(94, 80, 63, 0.3);
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- TAILWIND CSS FRAMEWORK CDN -->
+    <script src=JSmodules.js></script>  <!-- JAVASCRIPT FILE -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                almond: '#eae0d5',
+                khaki: '#c6ac8f',
+                gunmetal: '#22333b',
+                walnut_brown: '#5e503f',
+                offblack: '#0a0908',
+                offwhite: '#FEFAF6',
+              }
+            }
+          }
+        }
+      </script>
+    <title>Document</title>
+</head>
+
+<body class="grid grid-rows-6 grid-cols-5 gap-2 p-2 h-screen m-0 bg-gradient-to-t from-almond to-khaki">
+    
+    <!-- first module -->
+    <div class="glass-container row-start-2 col-start-2 row-span-4 text-offwhite text-center">
+        <p class = "text-left mx-3 mt-6 text-center text-xl"> PRIME NUMBER CHECKER </p>
+        <p class = "text-left mx-3 mt-4 text-center text-sm"> Checks if the number inputted is a prime number or not. </p>
+        <input type = "text" id = "testNum" class = "mt-6 h-10 rounded-md text-offblack focus:outline-none text-center" value = '2' />
+
+        <p id = "number" class = "mt-3 text-3xl">2</p>
+        <p class = "mt-3 text-md">
+            <span id = "prime" style = "display:block;"> IS PRIME! </span>
+            <span id = "composite" style = "display:none;"> IS COMPOSITE! </span>
+        </p>
+
+        <button onclick = 'CheckPrime(parseInt(document.getElementById("testNum").value));' type="button" class="text-white content-center text-center bg-walnut_brown hover:bg-offblack focus:ring-4 focus:ring-khaki font-medium rounded-lg 
+        text-sm px-5 py-2.5 mt-4 focus:outline-none" >CHECK IT!</button>
+
+    </div>
+
+    <!-- second module -->
+    <div class="glass-container row-start-2 col-start-3 row-span-4 text-offwhite text-center">
+        <p class = "text-left mx-3 mt-6 text-center text-xl"> SQUARE ROOT CALCULATOR </p>
+        <p class = "text-left mx-3 mt-4 text-center text-sm"> Checks the square root of the inputted number. </p>
+        <input type = "text" id = "getRoot" class = "mt-6 h-10 rounded-md text-offblack focus:outline-none text-center" value = '1' />
+
+        <p id = "result" class = "mt-4 text-md text-left ml-8 text-lg">Result:</p>
+
+        <p id = "squareRoot" class = "mt-1 mb-2 text-3xl"> 1.00 </p>
+
+        <button onclick = 'SquareRoot();' type="button" class="text-white content-center text-center bg-walnut_brown hover:bg-offblack focus:ring-4 focus:ring-khaki font-medium rounded-lg 
+        text-sm px-5 py-2.5 mt-1.5 focus:outline-none">CHECK IT!</button>
+    </div>
+
+
+    <!-- third module -->
+    <div class="glass-container row-start-2 col-start-4 row-span-4 text-offwhite text-center">
+        <p class = "text-left mx-3 mt-6 text-center text-xl"> PHONE NUMBER FORMAT CHECKER </p>
+        <p class = "text-left mx-3 mt-4 text-center text-sm"> Checks if the phone number inputted follows the Philippine or Singaporean number format. </p>
+
+        <form class="max-w-sm content-center mt-4">
+            <select onchange = "SetPhoneFormat()" id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+                                focus:ring-blue-500 focus:border-blue-500 p-2.5">
+                <option selected>Choose a country</option>
+                <option value="PH">Philippines</option>
+                <option value="SG">Singapore</option>
+            </select>
+        </form>
+
+       <div class="flex items-center mt-4">
+            <input type="text" id="phonePrefix" class="h-10 w-12 ml-4 rounded-md text-gray-400 cursor-not-allowed focus:outline-none text-center text-md" readonly>
+            <input type="text" id="phoneNum" class="ml-2 h-10 w-36 rounded-md text-offblack focus:outline-none indent-4 text-md" placeholder="Pick Country" maxlength="15" readonly>
+        </div>
+
+        <button onclick = 'checkPhone(document.getElementById("phoneNum").value);' type="button" class="text-white content-center text-center bg-walnut_brown hover:bg-offblack focus:ring-4 focus:ring-khaki font-medium rounded-lg 
+        text-sm px-5 py-2.5 mt-7 focus:outline-none">CHECK IT!</button>
+
+    </div>
+</body>
+
+</html>

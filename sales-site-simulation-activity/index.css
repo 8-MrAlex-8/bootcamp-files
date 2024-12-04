@@ -1,0 +1,290 @@
+/* Styles for screens smaller than 768px */
+@media only screen and (max-width: 767px) {
+  body {
+    margin: 0;
+    background-color: #C8C6D7;
+    font-family: Raleway;
+    display: grid;
+    grid-template-rows: 1fr, 1fr, auto, 1fr, 1fr;
+    grid-template-columns: 100%; 
+    height: 100%; /* Ensure the body takes full height */
+  }
+
+  header {
+    grid-row: 1 span;
+    width: 100%;
+    overflow: hidden;
+    background-color: #4A4063;
+  }
+
+  .NavTitle {
+    font-family: Noto Sans;
+    padding: 0rem 2rem 1rem 1rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+  }
+
+    nav {
+      width: 100%;
+      grid-row: 1 span;
+      height: 100%;
+      background-color: #783F8E;
+      margin-bottom: -1rem;
+    }
+
+    li.lastitem {
+      padding-bottom: -2.5rem;
+    }
+  
+    .active {
+      background-color: #BFACC8;
+    }
+
+    /* aside */
+
+    aside {
+      grid-row: 1 span;
+    
+    }
+
+    /* REMOVING THIS WILL CAUSE THE LAYOUT TO GO BONKERS */
+    
+    main {
+        order: 3; /* Main content comes after nav and aside */
+    }
+
+    footer {
+        order: 4; /* Footer at the bottom */
+    }
+
+    /* REMOVING THIS WILL CAUSE THE LAYOUT TO GO BONKERS */
+
+    .main-head-sm {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    .textblock {
+      margin: 3rem 3rem 3rem 3rem;
+    }
+  
+    .btn-container {
+      text-align: right;
+    }
+
+  td {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .center-container-sm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}
+
+/**************************/
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    margin: 0;
+    background-color: #C8C6D7;
+    font-family: Raleway;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr); /* Five rows of equal height */
+    grid-template-columns: repeat(8, 1fr); /* Five columns of equal width */
+    height: 100%; /* Ensure the body takes full height */
+  }
+
+  
+  header {
+    /* header should span the full width and occupy one row. */
+    grid-row: span 1;
+    width: 100%;
+    grid-column: span 8;
+    overflow: hidden;
+    /*margin-top: -0.5rem;*/
+    background-color: #4A4063;
+    font-family: Noto Sans;
+  }
+
+  .NavTitle {
+    font-family: Noto Sans;
+    padding: 1rem 2rem 1rem 1rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+  }
+
+  .logo {
+    margin-left: 1.2rem;
+  }
+
+  nav {
+    height: 100%;
+    background-color: #783F8E;
+    grid-row: span 8;
+  }
+
+  ul {
+    padding: 0.8rem;
+  }
+
+  aside {
+    grid-row: span 8;
+    grid-column: span 1; /* sidebar should occupy one column */
+
+  }
+
+  .main-content {
+    grid-row: 7 span;
+    grid-column: 6 span;
+  }
+
+  .main-body {
+    margin-top: 5rem;
+    background-color: #C8C6D7;
+    font-family: Raleway;
+    display: grid;
+    height: auto;
+  }
+
+  .main-heading {
+    margin-left: 4rem;
+  }
+
+  .li-container {
+    padding: 1rem;
+    border: 2px black;
+  }
+
+  .textblock {
+    margin: 3rem 4rem 3rem 4rem;
+  }
+ 
+  .btn-container {
+    text-align: right;
+  }
+
+  footer {
+    grid-column: span 8;
+    margin-top: -0.5rem;
+    font-size: 0.5rem;
+  }
+
+  .center-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.SideTitle {
+  font-family: Noto Sans;
+  padding: 1rem;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+ul {
+  width: 100%;
+  color: #f5f5f5;
+  font-family: Raleway;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 1rem 2rem 1rem 1rem;
+  text-indent: 0;
+  font-size: 0.95rem;    
+}
+
+li.hoverable:hover {
+  background-color: #BFACC8;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #BFACC8;
+}
+
+aside {
+  overflow: hidden;
+  width: 100%;
+  background-color: #4F1271;
+  font-family: Noto Sans;
+  text-align: center;
+}
+
+.textblock {
+  line-height: 150%;
+  padding: 1.8rem 3rem 1.8rem 3rem;
+
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+tr.glass {
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+td {
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+table {
+  border-spacing: 1rem;
+}
+
+.button-4 {
+  padding: 0.85rem;
+  background-color: #BFACC8;
+  color: black;
+  font-family: Raleway;
+  border: 0px;
+  border-radius: 8px;
+}
+
+.button-4:hover {
+  cursor: pointer;
+  background-color: #4F1271;
+  color: #f5f5f5;
+}
+
+footer {
+  /* footer should span the full width and occupy one row. */
+  grid-row: span 1;
+  width: 100%;
+  
+  overflow: hidden;
+  background-color: #4A4063;
+  color: #f5f5f5;
+  font-family: Noto Sans;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+

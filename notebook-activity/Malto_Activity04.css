@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(23, 55, 83);
+    font-family: Inter;
+    color: #f9f9f9;
+    text-align: center;
+}
+
+table, tr {
+    /* Equal padding at 0.3rem */
+    border-top: 0.3rem solid #6daedb; /* Different color vs. BOTTOM */
+    border-bottom: 0.3rem solid #71f79f;  /* Different color vs. TOP */
+   
+    border-left: 0.8rem dashed #1b4353;  /* Different style vs. RIGHT */
+    border-right: 0.3rem solid #1b4353; /* Different style vs. LEFT */
+    background-color: #1d70a2;
+
+    margin: 3rem; /* Equal margin */
+}
+
+ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+td {
+    padding: 35px; /* Each portion of the table has an equal padding of 35px; */
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-family: Montserrat;
+}
+
+li {
+    margin-top: 0.8rem;
+    text-align: left;
+}

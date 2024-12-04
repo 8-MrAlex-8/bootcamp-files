@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src = "calculator.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                richblack: '#050517',
+                flame: '#CF5C36',
+                sunset: '#EFC88B',
+                vanilla: '#F4E3B2',
+                platinum: '#D3D5D7',
+                offwhite: '#F5F5F5',
+              }
+            }
+          }
+        }
+      </script>
+      
+      <title>Calculator</title>
+</head>
+<body class = "grid grid-rows-10 grid-cols-4 p-4 h-screen m-0 bg-gradient-to-b from-flame to-vanilla">
+    <div id = "calculator-container" class = "row-start-2 row-span-8 col-start-2 col-span-2 bg-platinum rounded-2xl shadow-lg w-96 h-96 md:w-auto md:h-auto">
+      <div id = "input-container" class = "px-8 mt-8">
+        <input type = "text" id = "text" class = "h-16 w-full rounded-lg text-right bg-offwhite text-4xl mr-8 pr-4" value = '0' readonly></input>
+      </div>
+      <div id="button-container" class="grid grid-cols-subgrid col-start-2 row-start-4 gap-4 px-8 mt-10 bg-platinum">
+
+
+        
+        <button onclick="appendNumber('7');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full shadow-lg hover:bg-gray-600 hover:text-offwhite">7</button>
+            <button onclick="appendNumber('8');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">8</button>
+            <button onclick="appendNumber('9');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">9</button>
+            <button onclick="setOperation('/');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-vanilla hover:text-richblack bg-sunset">/</button>
+
+            <button onclick="appendNumber('4');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">4</button>
+            <button onclick="appendNumber('5');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">5</button>
+            <button onclick="appendNumber('6');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">6</button>
+            <button onclick="setOperation('*');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-vanilla hover:text-richblack  bg-sunset text-richblack">x</button>
+
+            <button onclick="appendNumber('1');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">1</button>
+            <button onclick="appendNumber('2');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">2</button>
+            <button onclick="appendNumber('3');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">3</button>
+            <button onclick="setOperation('-');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-vanilla hover:text-richblack bg-sunset text-richblack">-</button>
+
+            <button onclick="appendNumber('0');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">0</button>
+            <button onclick="appendNumber('.');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-gray-600 hover:text-offwhite">.</button>
+            <button onclick="setOperation('+');" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-vanilla hover:text-richblack  bg-sunset text-richblack">+</button>
+            <button onclick="squareRoot();" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                          shadow-lg hover:bg-vanilla hover:text-richblack bg-sunset text-richblack">√</button>
+
+            <button onclick="deleteLast();" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                            shadow-lg bg-richblack text-offwhite hover:bg-gray-400 hover:text-offwhite">Del</button>
+            <button onclick="clearAll();" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                            shadow-lg bg-richblack text-offwhite hover:bg-gray-400 hover:text-offwhite">AC</button>
+            <button onclick="calculate();" class="flex items-center justify-center bg-offwhite p-3 mx-3 rounded-full 
+                            shadow-lg col-start-3 col-span-2 text-offwhite bg-sunset text-richblack hover:bg-vanilla">=</button>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrolment Form</title>
+</head>
+
+<body style = "background-image: url('bgimg.png'); background-position:center; height: 100%; background-position: center; background-size: cover; font-family: arial;">
+
+    <center>
+
+    <div style = "background-color: #C41E3A; padding: 10px; margin:-10px;">
+        <h1 style = "color: #FEFEFE; font-family: georgia"> SILLIMAN UNIVERSITY ENROLLMENT FORM </h1>
+    </div>
+
+    <div style = "background-color: #e2e2e2; width: 50%; border-radius: 15px; margin-top:40px;">
+        <form>
+            <div>
+                <section id = "personal_data">
+
+                    <h2 style = "padding-top: 30px; margin-bottom: 26px;"> PERSONAL DATA </h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" id = "firstName" style="width:200px; margin-bottom:8px; height: 18px;"><br>
+                                <label for="firstName">First Name</label>
+                            </td>
+                            <td style = "padding-left: 20px;">
+                                <input type="text" id = "middleInitial" style="width:30px; margin-bottom:8px; height: 18px;"><br>
+                                <label for="middleInitial">M.I.</label>
+                            </td>
+                            <td style = "padding-left: 20px;">
+                                <input type="text" id = "lastName" style="width:200px; margin-bottom:8px; height: 18px;"><br>
+                                <label for="lastName">Last Name</label>
+                            </td>
+                            <td style = "padding-left: 20px;">
+                                <input type="text" id = "suffix" style="width:83px; margin-bottom:8px;  height: 18px;"><br>
+                                <label for="suffix">Suffix</label>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="age"> Age: </label><br>
+                                <input type="text" id = "age" style="width:25px; margin-top: 8px; height: 18px;">
+                            </td>
+
+                            <td style = "padding-left: 50px;">
+                                <label for="birthdate">Date of Birth: </label><br>
+                                <input type="date" id = "birthdate" style="width:100px; margin-top: 8px; padding: 3px;">
+                            </td>
+
+                            <td style = "padding-left: 50px;">
+                                <p> Sex:
+                                    <br>
+                                    <input type = "radio" id = "male" name = "sex" value = "MALE" style = "margin-top: 8px;">
+                                    <label for = "male">Male</label>
+                                    <input type = "radio" id = "female" name = "sex" value = "FEMALE">
+                                    <label for = "male">Female</label>
+                                </p>
+                            </td>
+
+                            <td style = "padding-left: 50px;">
+                                <p> Marital Status: <br>
+                                <select name="marital_status" id="marital_status" style = "margin-top: 8px; padding:5px;">
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Widowed">Widowed</option>
+                                    <option value="Separated">Separated</option>
+                                    <option value="Divorced">Divorced</option>
+                                </select>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style = "margin-top: 12px;">
+                        <tr>
+                            <td>
+                                <input type="text" id = "spouse" style="width:300px; margin-bottom:8px; height: 18px;"><br>
+                                <label for="spouse">Name of spouse (if married) </label> 
+                            </td>
+                            <td style = "padding-left:20px;">
+                                <input type="text" id = "religion" style="width:167px; margin-bottom:8px;  height: 18px;"><br>
+                                <label for="religion">Religion </label>
+
+                            </td>
+                        </tr>
+                    </table>
+
+                </section>
+                
+                <br>
+
+                <section id = "address_data">
+                    <h2 style = "margin-bottom: 24px;"> ADDRESS DATA </h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" id = "address" style="width:420px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="address">Street Address</label>
+                            </td>
+                            <td style = "padding-left:20px;">
+                                <input type="text" id = "barangay" style="width:150px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="barangay">Municipality/City</label>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr><br>
+                            <td>
+                                <input type="text" id = "province" style="width:150px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="province">Province</label>
+                            </td>
+                            <td style = "padding-left:20px;">
+                                <input type="text" id = "country" style="width:150px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="country">Country</label>
+                            </td>
+                            <td style = "padding-left:20px;">
+                                <input type="text" id = "zip" style="width:70px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="zip">ZIP Code</label>
+                            </td>
+                            <td style = "padding-left:20px;">
+                                <input type="text" id = "citizenship" style="width:142px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="citizenship">Citizenship</label>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <br>
+
+                <section id = "contact_info">
+                    <h2 style = "margin-bottom: 24px;"> CONTACT INFORMATION </h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" id = "cellNo" style="width:150px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="cellNo">Cellphone No.</label>
+                            </td>
+                            <td style = "padding-left:20px;">
+                                <input type="text" id = "landlineNo" style="width:150px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="landlineNo">Landline No.</label>
+                            </td>
+                            <td style = "padding-left:20px;">
+                                <input type="text" id = "email" style="width:220px; margin-bottom: 8px; height: 18px;"><br>
+                                <label for="email">Email Address</label>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <br>
+
+                <section>
+                    <h2 style = "margin-bottom: 12px;"> ENROLLMENT INFORMATION </h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <p> Select the College you wish to enroll in: </p>
+
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="COA" name="college" value="COA">
+                                            <label for="COA"> College of Agriculture</label><br>
+
+                                            <input type="radio" id="CAS" name="college" value="CAS">
+                                            <label for="CAS"> College of Arts and Sciences</label><br>
+                                            
+                                            <input type="radio" id="CBA" name="college" value="CBA">
+                                            <label for="CBA"> Collge of Business Administration</label><br>
+
+                                            <input type="radio" id="CCS" name="college" value="CCS">
+                                            <label for="CCS"> College of Computer Studies</label><br>
+
+                                            <input type="radio" id="COE" name="college" value="COE">
+                                            <label for="COE"> College of Education</label><br>
+                                            
+                                            <input type="radio" id="CED" name="college" value="CED">
+                                            <label for="CED"> Collge of Engineering and Design</label><br>
+
+                                            <input type="radio" id="COL" name="college" value="COL">
+                                            <label for="COL"> College of Law</label><br>
+
+                                            <input type="radio" id="CMC" name="college" value="Car">
+                                            <label for="CMC"> College of Mass Communication</label>
+                                        </td>
+                                    
+                                        <td style = "padding-bottom:21px;">
+                                            <input type="radio" id="CON" name="college" value="Boat">
+                                            <label for="CON"> College of Nursing</label><br>
+
+                                            <input type="radio" id="COPVA" name="college" value="Bike">
+                                            <label for="COPVA"> College of Performing and Visual Arts</label><br>
+
+                                            <input type="radio" id="DIV" name="college" value="DIV">
+                                            <label for="DIV"> Divinity School</label><br>
+                                            
+                                            <input type="radio" id="ICLS" name="college" value="ICLS">
+                                            <label for="ICLS"> Institute of Clinical Laboratory Sciences</label><br>
+
+                                            <input type="radio" id="IEMS" name="college" value="IEMS">
+                                            <label for="IEMS"> Institute of Environmental and Marine Sciences</label><br>
+                                            
+                                            <input type="radio" id="IRS" name="college" value="IRS">
+                                            <label for="IRS"> Institute of Rehabilitative Sciences</label><br>
+
+                                            <input type="radio" id="SPAG" name="college" value="SPAG">
+                                            <label for="SPAG"> School of Public Affairs and Governance</label><br>
+                                        </td>
+                                    </tr>
+                                </table>
+                                
+                                <br><br>
+
+                                <label for="religion">Enter your priority course: </label>
+                                <input type="text" id = "age" style="width:350px; margin-left:36px; height: 18px;">
+
+                                <br><br>
+
+                                <label for="religion">Enter your secondary course: </label>
+                                <input type="text" id = "age" style="width:350px; margin-left:11px; height: 18px;">
+
+                                <br><br>
+
+                                <label for="religion">Enter your tertiary course: </label>
+                                <input type="text" id = "age" style="width:350px; margin-left:36px; height: 18px; margin-bottom: 30px;">
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+
+            <button style = "padding: 12px; color: #FEFEFE; background-color: red; border-radius: 10px; border: none;"> Submit Form </button>
+
+            <br><br>
+        </form> 
+    </div>
+    </center>
+</body>
+</html>

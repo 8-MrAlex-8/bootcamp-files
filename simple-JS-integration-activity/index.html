@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "simple-JS-project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts: Ubuntu and Roboto Slab-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Simple Frontend Project</title>
+    <script src = "simple-JS-project.js"></script>
+</head>
+
+<body onload = "AgeClicked()">
+    <header>
+        <div class="center-container">
+            <img src = "images/aelexander-white-nobg.png" width = "120" height = "120" alt = "aelexander business logo, white without background">
+            <h2>ÆLEXANDER TECH SOLUTIONS</h2>
+        </div>
+    </header>
+
+    <aside class = "left-aside">
+        <ul>
+            <li id = "active-able-age" class = "sidebar-item" onclick = "AgeClicked()">AGE</li>
+            <li id = "active-able-grid" class = "sidebar-item" onclick = "GridClicked()">GRID PRINT</li>
+            <li id = "active-able-loop" class = "sidebar-item"onclick = "LinePrintClicked()">LOOP PRINT</li>
+        </ul>
+    </aside>
+
+    <main>
+
+        <section id = "age-section">
+            <h3> Enter your age: </h3>
+            <input type = "text" id = "age"/>
+            <button onclick = 'CheckAge()' class = "checkAge" style = "margin-left: 1rem;">Check Age </button>
+
+            <dl style = "margin-bottom: 2rem;">
+                <dt>Section Description:</dt>
+                <dd>
+                    This section takes user input, requiring them to input a particular age.
+                    This age is taken to a CheckAge() function to be parsed and processed/analyzed.
+                    The following considerations apply:
+                    <ol>
+                        <li class = "iter">Alert box comes out displaying "You are a legal adult now!" when age is 18 and up.</li>
+                        <li class = "iter">Alert box comes out displaying "You are still a minor!" when age ranges from 1 to 17.</li>
+                        <li class = "iter">If input is 0 or less, user will be met with an error message.</li>
+                        <li class = "iter">If input is not a number, user will be met with an error message with instruction.</li>
+                        <li class = "iter">If input is an EVEN number, it will display a message which says so, provided that the age is valid.</li>
+                    </ol>
+                </dd>
+            </dl>
+        </section>
+
+        <section id="grid-section">
+            <dl style = "margin-bottom: 2rem;">
+                <dt>Section Description:</dt>
+                <dd>
+                    This section simply utilizes a button which processes the first sixteen even numbers in a 4x4 structure.
+                    The processing utilizes a nested loop which deals with rows and columns, with a variable named 'content' to
+                    store expected output.
+                </dd>
+                <br>
+                <button class = "printGrid" onclick = "printGrid()"> Print </button>
+                <button class = "printGrid" onclick = "HideGrid()" style = "margin-left: 0.5rem;"> Hide </button>
+                <p style = "font-size: 1rem; margin: 1.5rem 0rem 1.5rem;">Output: </p>
+                <p id = "gridPrint" style = "margin-left: 3rem;"></p>
+            </dl>
+        </section>
+
+        <section id="loop-section">
+            <dl style = "margin-bottom: 2rem;">
+                <dt>Section Description:</dt>
+                <dd>
+                    This section operates just like the second one. However, this time, it shows the
+                    first 10 even numbers and last 10 odd numbers within the range 0-100.
+                </dd>
+
+                <br>
+
+                <button class = "printFirstTen" onclick = "PrintFirstTen()"> Print </button>
+                <button class = "printFirstTen" onclick = "HideFirstTen()" style = "margin-left: 0.5rem;"> Hide </button>
+                <p style = "font-size: 1rem; margin: 1.5rem 0rem 1.5rem;">First 10 even numbers: </p>
+                <p id = "firstTen" style = "margin-left: 3rem;"></p>
+
+                <button class = "printLastTen" onclick = "PrintLastTen()"> Print </button>
+                <button class = "printLastTen" onclick = "HideLastTen()" style = "margin-left: 0.5rem;"> Hide </button>
+                <p style = "font-size: 1rem; margin: 1.5rem 0rem 1.5rem;">Last 10 odd numbers (0-100): </p>
+                <p id = "lastTen" style = "margin-left: 3rem;"></p>
+
+            </dl>
+        </section>
+
+        <p style = "font-size: 1rem;"> Feel free to try it out! </p>
+    </main>
+
+    <footer>
+        <div class="center-container">
+            <p> © Ælexander Solutions 2024. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
